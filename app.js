@@ -46,7 +46,7 @@ app.use(
 app.use(express.json());
 app.use(helmet());
 app.use(cors({
-  origin: ['https://digitalcointrades.net', 'https://tradetechcoinadmin.vercel.app', 'https://digital-coin-admin.vercel.app', 'http://localhost:5173', 'http://localhost:3000']
+  origin: ['https://wealthbridge-admin.vercel.app', 'https://digital-coin-admin.vercel.app', 'http://localhost:5173', 'http://localhost:3000']
 }));
 app.use(xss());
 
@@ -62,7 +62,7 @@ app.use("/upload", uploadRoutes);
 app.use("/auth", auth, modifyUserRoutes);
 app.use("/admin/auth", adminAuth);
 app.get('/', (req, res) => {
-  res.json({ welcome: 'tradetech coin trades' })
+  res.json({ welcome: 'wealth bridge api' })
 })
 app.use("/admin", adminAuthMiddleware, adminRoutes);
 app.use(notFoundMiddleware);
