@@ -36,7 +36,6 @@ const addWithdrawal = async (req, res) => {
         }
         const newWithdrawal = await Withdrawal.create(req.body)
         const getPopulated = await Withdrawal.findOne({ _id: newWithdrawal._id }).populate({ path: "owner", model: "user" });
-        console.log(req.body.amount)
         res.status(StatusCodes.CREATED).json(getPopulated);
         console.log(req.decoded.name)
     } catch (error) {
