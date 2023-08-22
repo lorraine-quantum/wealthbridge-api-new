@@ -46,7 +46,7 @@ app.use(
 app.use(express.json());
 app.use(helmet());
 app.use(cors({
-  origin: ['https://wealthbridge-admin.vercel.app', 'https://digital-coin-admin.vercel.app', 'http://localhost:5173', 'http://localhost:3000']
+  origin: ['https://wealthbridgeinvestments.org', 'https://admin.wealthbridgeinvestments.org', 'http://localhost:3111']
 }));
 app.use(xss());
 
