@@ -68,7 +68,7 @@ app.use("/admin", adminAuthMiddleware, adminRoutes);
 app.use(notFoundMiddleware);
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 //switch between local and cloud db
 
 const local = process.env.LOCAL_URI;
